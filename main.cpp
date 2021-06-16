@@ -2,9 +2,9 @@
 
 int GetRabbitWays(int stair_num)
 {
-    if (stair_num == 0) return 1; // He will just stay still
+    if (stair_num < 0) return 0;
+    if (stair_num == 0) return 1; // He will just stand still
     if (stair_num == 1) return 1;
-    if (stair_num == 2) return 2;
 
     return  GetRabbitWays(stair_num - 1) +
             GetRabbitWays(stair_num - 2) +
